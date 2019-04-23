@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="TallerJava">
+        <wb-resource deploy-path="/" source-path="/EarContent" tag="defaultRootSource"/>
+        <dependent-module archiveName="TallerJavaWeb.war" deploy-path="/" handle="module:/resource/TallerJavaWeb/TallerJavaWeb">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="TallerJavaClient.jar" deploy-path="/" handle="module:/resource/TallerJavaClient/TallerJavaClient">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="TallerJavaConnector.rar" deploy-path="/" handle="module:/resource/TallerJavaConnector/TallerJavaConnector">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="TallerJavaEJB.jar" deploy-path="/" handle="module:/resource/TallerJavaEJB/TallerJavaEJB">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+    </wb-module>
+</project-modules>
