@@ -3,7 +3,6 @@ package Beans;
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 
-import com.mysql.cj.Query;
 
 import dao.UserDAO;
 import model.User;
@@ -31,6 +30,14 @@ public class UserService implements UserServiceLocal {
     public boolean logout() {
     	return true;
 
+	}
+
+	public User getmUser() {
+		return mUser;
+	}
+
+	public void setmUser(User mUser) {
+		this.mUser = mUser;
 	}
 
 }

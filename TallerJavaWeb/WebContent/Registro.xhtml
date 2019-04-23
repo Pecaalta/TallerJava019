@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+	<title>Configuring navigation rules</title>
+	<style>
+    
+	    html, body, .body {
+			height: 100%;
+			width: 100%;
+			margin: 0;
+		}
+	    .body {
+			height: 100%;
+			width: 100%;
+			position: fixed;
+			top: 0;
+			left: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction:column;
+			background: #3a58f9!important;
+		}
+	    form {
+	    }
+	    
+	    .form { 
+	    	grid-area: form;
+			padding: 40px; 
+			overflow-y: auto;
+	    }
+	    
+	    .info { 
+			overflow: auto;
+	    	grid-area: info; 
+	    	background-size: 500px;
+	    	background: url("http://cdn.home-designing.com/wp-content/uploads/2018/06/minimalist-home-office.jpg");
+	    }
+	    
+	    .info .info-container {
+			padding: 40px;
+	    	color: #eee;
+	    	background: rgba(0, 0, 0,.6);
+	    	width: 100%;
+	    	height: 100%;
+	    	display: block;
+		}
+	
+	    form .form-container {
+			display: grid;
+			grid-template-areas:
+				'info form';
+			grid-template-columns: 300px 1fr;
+			max-width: 800px;
+			width: 100%;
+			max-height: 100%;
+			padding: 0!important; 
+			background:#fff;
+			box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+	    }
+	
+	    @media only screen and (min-width: 600px) {
+	        .form-container {
+	            grid-template-areas:
+	                'info'
+	                'form';
+	            grid-template-rows: auto auto;
+	            grid-template-columns: 1fr;
+	        }
+	    }
+
+	</style>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"></link>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</h:head>
+<h:body>
+	<h:form>
+		<div class="body">
+			<div class="form-container">
+				<div class="info">
+			        <div class="info-container">
+			            <h1>Titulo</h1>
+			            <p>asdasfsafafa</p>
+			        </div>
+				</div>
+	            <div class="form">
+	                <div class="form-group col-12">    
+	                    <h:outputLabel for="Nombre">Nombre:</h:outputLabel>
+	                    <h:inputText id="Nombre" class="form-control" value="#{usuario.nombre}"></h:inputText>
+	                </div>
+	                <div class="form-group col-12">
+	                    <h:outputLabel for="Direccion">Direccion:</h:outputLabel>
+	                    <h:inputText id="Direccion" class="form-control" value="#{usuario.direccion}"></h:inputText>
+	                </div>
+	                <div class="form-group col-12">
+	                    <h:outputLabel for="Email">Email:</h:outputLabel>
+	                    <h:inputText id="Email" class="form-control" value="#{usuario.email}"></h:inputText>
+	                </div>
+	                <div class="form-group col-12">
+	                    <h:outputLabel for="Password">Password:</h:outputLabel>
+	                    <h:inputText id="Password" type="password" class="form-control" value="#{usuario.password}"></h:inputText>
+	                </div>
+	                <div class="form-group col-12">
+	                    <h:outputLabel for="Repassword">Repassword:</h:outputLabel>
+	                    <h:inputText id="Repassword" type="password" class="form-control" value="#{usuario.repassword}"></h:inputText>
+	                </div>
+	                <div class="form-group col-12">
+	                	<h:commandButton class="btn btn-primary display-block margin-auto "  value="Entrar" action="#{usuario.registrar}"></h:commandButton>
+	                </div>
+	                
+	            </div>
+	        </div>
+
+		</div>
+	</h:form>
+</h:body>
+</html>
